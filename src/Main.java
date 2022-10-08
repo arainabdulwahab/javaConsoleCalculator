@@ -8,13 +8,29 @@ public class Main {
         int num2 =0; // primitive variable for second user input initialized and declared
         String result =""; // non-primitive variable store result
         System.out.println("Simple calculator with basic functionality \n\n\n"); // title
-        System.out.print("\t\t write first digit: "); // prompt for first digit
+        System.out.print("\t\t type first digit: "); // prompt for first digit
         num1 = read.nextInt(); // take user input and store it in a variable
-        System.out.print("\t\t write second digit: "); // prompt for second digit
+        System.out.print("\t\t type second digit: "); // prompt for second digit
+        num2 = read.nextInt(); // take user input and store it in a variable
+        System.out.print("\t\t type an operator ' + ' ' - ' ' * ' ' / ' : "); // prompt for second digit
         operator = read.next().trim().charAt(0); // take user input of operator to do basic math calculation
         switch(operator){ // logic for basic calculation goes in switch
-
-
+            case '+':
+                result = ""  + ( num1 + num2); // add variables and convert into string
+            break;
+            case '-':
+                result = ""  + ( num1 - num2); // subtract variables and convert into string
+                break;
+            case '*':
+                result = ""  + ( num1 * num2); // multiply variables and convert into string
+                break;
+            case '/':
+                result = ""  + ( num1 / num2); // divide variables and convert into string
+                break;
+            default:
+                result = "none of the operator selected aboove";
         } // end switch
+        System.out.println(""); // empty lines
+        System.out.println("\t\t Result: " + result); // display result
     } // end main class
 }
